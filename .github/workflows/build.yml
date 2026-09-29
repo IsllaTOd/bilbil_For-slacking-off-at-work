@@ -17,6 +17,8 @@ jobs:
     - run: npm install
 
     - run: npm run win64
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # <-- 就是加了这一行：把自动生成的钥匙给机器人
 
     - uses: actions/upload-artifact@v4
       with:
