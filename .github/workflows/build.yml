@@ -1,0 +1,27 @@
+on:
+  push:
+    branches: [ "main", "master" ] 
+  workflow_dispatch: 
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '16'
+
+    - run: npm install
+
+    - run: npm run win64
+
+    - uses: actions/upload-artifact@v4
+      with:
+        name: Bili-Hide-it
+        path: |
+          dist/*.exe
+          build/*.exe
+          out/*.exe
