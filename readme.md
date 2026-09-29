@@ -9,6 +9,8 @@
 
 ---
 
+## 只打包了64位，可以直接下载.exe，不用下载整个仓库。
+
 ## 运行环境
 https://nodejs.org/zh-cn/download
 
