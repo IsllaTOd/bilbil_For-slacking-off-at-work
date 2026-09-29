@@ -11,10 +11,12 @@
 
 ## 只打包了64位，可以直接下载.exe，不用下载整个仓库。
 
-## 运行环境
+---
+
+### 运行环境
 https://nodejs.org/zh-cn/download
 
-## For Developers
+### For Developers
 
 ```
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
@@ -30,7 +32,7 @@ npm start
 
 ---
 
-##  **Acknowledgements**
+####  **Acknowledgements**
 
 本项目是基于原作者开源的桌面悬浮摸鱼项目 (https://github.com/chitosai/bilimini#for-developers)进行的二次开发与修复版本。
 
