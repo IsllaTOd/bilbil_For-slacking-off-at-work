@@ -5,6 +5,7 @@ const dialog = electron.dialog;
 const globalShortcut = electron.globalShortcut;
 const Menu = electron.Menu;
 const utils = require('./js/utils.js');
+const path = require('path');
 
 // 禁用安全提示
 // https://www.electronjs.org/docs/tutorial/security
@@ -37,7 +38,12 @@ function openMainWindow() {
   }
   // 根据透明度设置决定是否要创建transparent窗口
   var opacity = utils.config.get('opacity'),
-      windowParams = {width: 375, height: 500, frame: false};
+      windowParams = {
+        width: 375,
+        height: 500, 
+        frame: false,
+        icon: path.join(__dirname, 'build', 'icon.ico')
+      };
   if( opacity < 1 ) {
     windowParams.transparent = true;
     windowParams.opacity = opacity;
