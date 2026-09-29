@@ -1,33 +1,42 @@
 {
-  "name": "isllatod",
+  "name": "bili-hide-it",
+  "productName": "Bili-Hide-it",
   "version": "1.0.0",
-  "description": "Hide!bilibili",
+  "description": "Bili-Hide-it",
+  "author": "IsllaTOd",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "win64": "electron-builder --x64",
-    "win32": "./node_modules/.bin/electron-builder --ia32",
-    "mac": "./node_modules/.bin/electron-builder --mac",
-    "linux": "./node_modules/.bin/electron-builder --linux appimage"
-  },
-  "repository": "https://github.com/IsllaTOd/bilbil_For-slacking-off-at-work",
-  "author": "isllatod",
-  "devDependencies": {
-    "electron": "^13.6.6",
-    "electron-builder": "^22.9.1"
+    "win32": "electron-builder --ia32",
+    "mac": "electron-builder --mac",
+    "linux": "electron-builder --linux appimage"
   },
   "build": {
-    "mac": {
-      "category": "Network"
+    "appId": "com.isllatod.bilihideit",
+    "copyright": "Copyright © 2026 IsllaTOd",
+    "win": {
+      "icon": "build/icon.png"
     },
-    "linux": {
-      "category": "Network",
-      "icon": "build/icon256.png"
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "shortcutName": "Bili-Hide-it",
+      "artifactName": "${productName}_v${version}_setup.${ext}"
     }
   },
   "dependencies": {
-    "electron-is-accelerator": "^0.1.2",
-    "electron-store": "^8.0.1",
-    "graceful-fs": "^4.2.6"
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.10",
+    "crypto-js": "^4.1.1",
+    "express": "^4.17.1",
+    "got": "^11.8.2",
+    "qrcode": "^1.4.4",
+    "request": "^2.88.2",
+    "ws": "^8.2.3"
+  },
+  "devDependencies": {
+    "electron": "^13.6.9",
+    "electron-builder": "^22.14.5"
   }
 }
