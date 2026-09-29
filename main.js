@@ -372,6 +372,11 @@ function bindGlobalShortcut(isUpdate) {
     });
   }
   utils.log('老板键：注册成功');
+  // 秒退键
+  globalShortcut.register('F2', () => {
+    utils.log('秒退键触发：瞬间强杀进程');
+    app.exit(0); 
+  });
 }
 
 function initGlobalShortcut() {
