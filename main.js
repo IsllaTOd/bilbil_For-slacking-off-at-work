@@ -241,6 +241,7 @@ function setProxy(isUpdate) {
 }
 
 function init() {
+  app.setAppUserModelId("com.isllatod.moyu");
   utils.log(`主线程：初始化；Platform：${process.platform}`, null, true);
   initGlobalShortcut();
   initMenu();
