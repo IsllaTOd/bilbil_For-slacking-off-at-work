@@ -1,0 +1,38 @@
+{
+  "name": "bilbil-hide-it",
+  "version": "1.1.0",
+  "description": "bilbil-hide-it",
+  "author": "IsllaTOd",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "win64": "electron-builder --x64",
+    "win32": "electron-builder --ia32",
+    "mac": "electron-builder --mac",
+    "linux": "electron-builder --linux appimage"
+  },
+  "repository": "https://github.com/IsllaTOd/bilibili_For-slacking-off-at-work",
+  "author": "isllatod",
+  "devDependencies": {
+    "electron": "^13.6.6",
+    "electron-builder": "^22.9.1"
+  },
+  "build": {
+    "mac": {
+      "category": "Network"
+    },
+    "linux": {
+      "category": "Network",
+      "icon": "build/icon.ico"
+    },
+"nsis": {
+      "oneClick": false,                          
+      "allowToChangeInstallationDirectory": true   
+    }
+  },
+  "dependencies": {
+    "electron-is-accelerator": "^0.1.2",
+    "electron-store": "^8.0.1",
+    "graceful-fs": "^4.2.6"
+  }
+}

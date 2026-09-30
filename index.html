@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+	<meta charset="UTF-8">
+	<title>bilbil-hide-it</title>
+	<link rel="stylesheet" href="css/main-window.css">
+</head>
+<body>
+
+	<div id="wrapper">
+
+	    <webview id="wv" src="https://m.bilibili.com/index.html" useragent="Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 EdgiOS/121.0.0.0 Mobile/15E148 Safari/604.1" preload="./js/inject.js" disablewebsecurity webpreferences="allowRunningInsecureContent"></webview>
+		
+		<div id="loading"></div>
+
+		<div id="about">
+			<div><img src="build/icon.ico" style="width: 64px; height: 64px; border-radius: 10px; object-fit: cover;"></div>
+			<div id="about-title">bilbil-hide-it v{{ version }}</div>
+			<p>维护者：IsllaTOd</p>
+		</div>
+		<div id="about-overlay" :class="{globalOverlay: 1, active: showAboutOverlay}" @click="hideAbout"></div>
+
+		<div id="topbar">
+			<div id="icon-bar-left"></div>
+			
+			<div id="dragzone" style="-webkit-app-region: drag !important; position: absolute; left: 80px; right: 150px; top: 0; height: 50px; z-index: 99999;"></div>
+			
+			<div id="icon-bar-right">
+				<span id="app-feed" title="动态" class="top-btn icon-btn" @click="showFeed"></span>
+				<span id="app-config" title="设置" class="top-btn icon-btn" @click="toggleConfig"></span>
+				<span id="app-about" title="关于" class="top-btn icon-btn" @click="showAbout">?</span>
+				<span id="app-close" title="退出" class="top-btn icon-btn" @click="turnOff">x</span>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="js/vue.min.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>
