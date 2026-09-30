@@ -14,7 +14,7 @@ const platform = process.platform.startsWith('win') ? 'win' : process.platform;
 process.on('uncaughtException', (err) => {
   console.error('主线程意外报错', err);
   utils.error(`主线程意外报错\n${err}`);
-  dialog.showErrorBox('肥肠抱歉', '好像出现了意料之外的错误，建议您现在关闭程序并到bilibili-hide-it的根目录下找到一个名为bilibili-hide-it.log的文件，并把这个文件通过电子邮件发送给我?(562102646@qq.com)。\n但是也可能没人能看到，可能这个软件也只有我自己在用，上班怎么这么苦TT');
+  dialog.showErrorBox('抱歉', '好像出现了意料之外的错误，建议您现在关闭程序并到bilibili-hide-it的根目录下找到一个名为bilibili-hide-it.log的文件，并把这个文件通过电子邮件发送给我?(562102646@qq.com)。\n但是也可能没人能看到，可能这个软件也只有我自己在用，上班怎么这么苦TT');
 });
 
 var mainWindow = null, mainWindowIsClosed = null;
